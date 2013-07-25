@@ -1,13 +1,13 @@
 /**
  */
-package org.mehdi.model.util;
+package org.mehdi.webapp.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.mehdi.model.*;
+import org.mehdi.webapp.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -19,17 +19,17 @@ import org.mehdi.model.*;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.mehdi.model.WebappPackage
+ * @see org.mehdi.webapp.TP-EMFPackage
  * @generated
  */
-public class WebappSwitch<T> extends Switch<T> {
+public class TP-EMFSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static WebappPackage modelPackage;
+	protected static TP-EMFPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -37,9 +37,9 @@ public class WebappSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WebappSwitch() {
+	public TP-EMFSwitch() {
 		if (modelPackage == null) {
-			modelPackage = WebappPackage.eINSTANCE;
+			modelPackage = TP-EMFPackage.eINSTANCE;
 		}
 	}
 
@@ -66,15 +66,22 @@ public class WebappSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case WebappPackage.LOCATION: {
+			case TP-EMFPackage.LOCATION: {
 				Location location = (Location)theEObject;
 				T result = caseLocation(location);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
-			case WebappPackage.USER: {
+			case TP-EMFPackage.USER: {
 				User user = (User)theEObject;
 				T result = caseUser(user);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case TP-EMFPackage.PRIVATE_USER: {
+				PrivateUser privateUser = (PrivateUser)theEObject;
+				T result = casePrivateUser(privateUser);
+				if (result == null) result = caseUser(privateUser);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -113,6 +120,21 @@ public class WebappSwitch<T> extends Switch<T> {
 	}
 
 	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Private User</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Private User</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePrivateUser(PrivateUser object) {
+		return null;
+	}
+
+	/**
 	 * Returns the result of interpreting the object as an instance of '<em>EObject</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
@@ -128,4 +150,4 @@ public class WebappSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //WebappSwitch
+} //TP-EMFSwitch

@@ -1,6 +1,6 @@
 /**
  */
-package org.mehdi.model.impl;
+package org.mehdi.model.webapp.impl;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EObject;
@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.impl.EFactoryImpl;
 
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
-import org.mehdi.model.*;
+import org.mehdi.model.webapp.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -18,24 +18,24 @@ import org.mehdi.model.*;
  * <!-- end-user-doc -->
  * @generated
  */
-public class WebappFactoryImpl extends EFactoryImpl implements WebappFactory {
+public class webappFactoryImpl extends EFactoryImpl implements webappFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static WebappFactory init() {
+	public static webappFactory init() {
 		try {
-			WebappFactory theWebappFactory = (WebappFactory)EPackage.Registry.INSTANCE.getEFactory(WebappPackage.eNS_URI);
-			if (theWebappFactory != null) {
-				return theWebappFactory;
+			webappFactory thewebappFactory = (webappFactory)EPackage.Registry.INSTANCE.getEFactory(webappPackage.eNS_URI);
+			if (thewebappFactory != null) {
+				return thewebappFactory;
 			}
 		}
 		catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new WebappFactoryImpl();
+		return new webappFactoryImpl();
 	}
 
 	/**
@@ -44,7 +44,7 @@ public class WebappFactoryImpl extends EFactoryImpl implements WebappFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WebappFactoryImpl() {
+	public webappFactoryImpl() {
 		super();
 	}
 
@@ -56,8 +56,9 @@ public class WebappFactoryImpl extends EFactoryImpl implements WebappFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case WebappPackage.LOCATION: return createLocation();
-			case WebappPackage.USER: return createUser();
+			case webappPackage.LOCATION: return createLocation();
+			case webappPackage.USER: return createUser();
+			case webappPackage.PRIVATE_USER: return createPrivateUser();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -88,8 +89,18 @@ public class WebappFactoryImpl extends EFactoryImpl implements WebappFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WebappPackage getWebappPackage() {
-		return (WebappPackage)getEPackage();
+	public PrivateUser createPrivateUser() {
+		PrivateUserImpl privateUser = new PrivateUserImpl();
+		return privateUser;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public webappPackage getwebappPackage() {
+		return (webappPackage)getEPackage();
 	}
 
 	/**
@@ -99,8 +110,8 @@ public class WebappFactoryImpl extends EFactoryImpl implements WebappFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static WebappPackage getPackage() {
-		return WebappPackage.eINSTANCE;
+	public static webappPackage getPackage() {
+		return webappPackage.eINSTANCE;
 	}
 
-} //WebappFactoryImpl
+} //webappFactoryImpl

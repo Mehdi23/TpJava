@@ -1,6 +1,6 @@
 /**
  */
-package org.mehdi.model;
+package org.mehdi.webapp;
 
 import org.eclipse.emf.ecore.EFactory;
 
@@ -9,17 +9,17 @@ import org.eclipse.emf.ecore.EFactory;
  * The <b>Factory</b> for the model.
  * It provides a create method for each non-abstract class of the model.
  * <!-- end-user-doc -->
- * @see org.mehdi.model.WebappPackage
+ * @see org.mehdi.webapp.TP-EMFPackage
  * @generated
  */
-public interface WebappFactory extends EFactory {
+public interface TP-EMFFactory extends EFactory {
 	/**
 	 * The singleton instance of the factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	WebappFactory eINSTANCE = org.mehdi.model.impl.WebappFactoryImpl.init();
+	TP-EMFFactory eINSTANCE = org.mehdi.webapp.impl.TP-EMFFactoryImpl.init();
 
 	/**
 	 * Returns a new object of class '<em>Location</em>'.
@@ -40,12 +40,21 @@ public interface WebappFactory extends EFactory {
 	User createUser();
 
 	/**
+	 * Returns a new object of class '<em>Private User</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Private User</em>'.
+	 * @generated
+	 */
+	PrivateUser createPrivateUser();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the package supported by this factory.
 	 * @generated
 	 */
-	WebappPackage getWebappPackage();
+	TP-EMFPackage getTP-EMFPackage();
 
-} //WebappFactory
+} //TP-EMFFactory

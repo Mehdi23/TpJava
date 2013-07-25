@@ -1,6 +1,6 @@
 /**
  */
-package org.mehdi.model.util;
+package org.mehdi.webapp.util;
 
 import org.eclipse.emf.common.notify.Adapter;
 import org.eclipse.emf.common.notify.Notifier;
@@ -9,24 +9,24 @@ import org.eclipse.emf.common.notify.impl.AdapterFactoryImpl;
 
 import org.eclipse.emf.ecore.EObject;
 
-import org.mehdi.model.*;
+import org.mehdi.webapp.*;
 
 /**
  * <!-- begin-user-doc -->
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see org.mehdi.model.WebappPackage
+ * @see org.mehdi.webapp.TP-EMFPackage
  * @generated
  */
-public class WebappAdapterFactory extends AdapterFactoryImpl {
+public class TP-EMFAdapterFactory extends AdapterFactoryImpl {
 	/**
 	 * The cached model package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static WebappPackage modelPackage;
+	protected static TP-EMFPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -34,9 +34,9 @@ public class WebappAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WebappAdapterFactory() {
+	public TP-EMFAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = WebappPackage.eINSTANCE;
+			modelPackage = TP-EMFPackage.eINSTANCE;
 		}
 	}
 
@@ -65,8 +65,8 @@ public class WebappAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected WebappSwitch<Adapter> modelSwitch =
-		new WebappSwitch<Adapter>() {
+	protected TP-EMFSwitch<Adapter> modelSwitch =
+		new TP-EMFSwitch<Adapter>() {
 			@Override
 			public Adapter caseLocation(Location object) {
 				return createLocationAdapter();
@@ -74,6 +74,10 @@ public class WebappAdapterFactory extends AdapterFactoryImpl {
 			@Override
 			public Adapter caseUser(User object) {
 				return createUserAdapter();
+			}
+			@Override
+			public Adapter casePrivateUser(PrivateUser object) {
+				return createPrivateUserAdapter();
 			}
 			@Override
 			public Adapter defaultCase(EObject object) {
@@ -96,13 +100,13 @@ public class WebappAdapterFactory extends AdapterFactoryImpl {
 
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mehdi.model.Location <em>Location</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mehdi.webapp.Location <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mehdi.model.Location
+	 * @see org.mehdi.webapp.Location
 	 * @generated
 	 */
 	public Adapter createLocationAdapter() {
@@ -110,16 +114,30 @@ public class WebappAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link org.mehdi.model.User <em>User</em>}'.
+	 * Creates a new adapter for an object of class '{@link org.mehdi.webapp.User <em>User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see org.mehdi.model.User
+	 * @see org.mehdi.webapp.User
 	 * @generated
 	 */
 	public Adapter createUserAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link org.mehdi.webapp.PrivateUser <em>Private User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see org.mehdi.webapp.PrivateUser
+	 * @generated
+	 */
+	public Adapter createPrivateUserAdapter() {
 		return null;
 	}
 
@@ -135,4 +153,4 @@ public class WebappAdapterFactory extends AdapterFactoryImpl {
 		return null;
 	}
 
-} //WebappAdapterFactory
+} //TP-EMFAdapterFactory

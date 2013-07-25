@@ -1,6 +1,6 @@
 /**
  */
-package org.mehdi.model;
+package org.mehdi.model.webapp;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see org.mehdi.model.WebappFactory
+ * @see org.mehdi.model.webapp.webappFactory
  * @model kind="package"
  * @generated
  */
-public interface WebappPackage extends EPackage {
+public interface webappPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -54,14 +54,14 @@ public interface WebappPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	WebappPackage eINSTANCE = org.mehdi.model.impl.WebappPackageImpl.init();
+	webappPackage eINSTANCE = org.mehdi.model.webapp.impl.webappPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link org.mehdi.model.impl.LocationImpl <em>Location</em>}' class.
+	 * The meta object id for the '{@link org.mehdi.model.webapp.impl.LocationImpl <em>Location</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mehdi.model.impl.LocationImpl
-	 * @see org.mehdi.model.impl.WebappPackageImpl#getLocation()
+	 * @see org.mehdi.model.webapp.impl.LocationImpl
+	 * @see org.mehdi.model.webapp.impl.webappPackageImpl#getLocation()
 	 * @generated
 	 */
 	int LOCATION = 0;
@@ -112,11 +112,11 @@ public interface WebappPackage extends EPackage {
 	int LOCATION_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link org.mehdi.model.impl.UserImpl <em>User</em>}' class.
+	 * The meta object id for the '{@link org.mehdi.model.webapp.impl.UserImpl <em>User</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see org.mehdi.model.impl.UserImpl
-	 * @see org.mehdi.model.impl.WebappPackageImpl#getUser()
+	 * @see org.mehdi.model.webapp.impl.UserImpl
+	 * @see org.mehdi.model.webapp.impl.webappPackageImpl#getUser()
 	 * @generated
 	 */
 	int USER = 1;
@@ -166,92 +166,177 @@ public interface WebappPackage extends EPackage {
 	 */
 	int USER_OPERATION_COUNT = 0;
 
+	/**
+	 * The meta object id for the '{@link org.mehdi.model.webapp.impl.PrivateUserImpl <em>Private User</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see org.mehdi.model.webapp.impl.PrivateUserImpl
+	 * @see org.mehdi.model.webapp.impl.webappPackageImpl#getPrivateUser()
+	 * @generated
+	 */
+	int PRIVATE_USER = 2;
 
 	/**
-	 * Returns the meta object for class '{@link org.mehdi.model.Location <em>Location</em>}'.
+	 * The feature id for the '<em><b>Id</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIVATE_USER__ID = USER__ID;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIVATE_USER__NAME = USER__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Location</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIVATE_USER__LOCATION = USER__LOCATION;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIVATE_USER__PASSWORD = USER_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of structural features of the '<em>Private User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIVATE_USER_FEATURE_COUNT = USER_FEATURE_COUNT + 1;
+
+	/**
+	 * The number of operations of the '<em>Private User</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PRIVATE_USER_OPERATION_COUNT = USER_OPERATION_COUNT + 0;
+
+
+	/**
+	 * Returns the meta object for class '{@link org.mehdi.model.webapp.Location <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Location</em>'.
-	 * @see org.mehdi.model.Location
+	 * @see org.mehdi.model.webapp.Location
 	 * @generated
 	 */
 	EClass getLocation();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mehdi.model.Location#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mehdi.model.webapp.Location#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see org.mehdi.model.Location#getId()
+	 * @see org.mehdi.model.webapp.Location#getId()
 	 * @see #getLocation()
 	 * @generated
 	 */
 	EAttribute getLocation_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mehdi.model.Location#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mehdi.model.webapp.Location#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.mehdi.model.Location#getName()
+	 * @see org.mehdi.model.webapp.Location#getName()
 	 * @see #getLocation()
 	 * @generated
 	 */
 	EAttribute getLocation_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link org.mehdi.model.Location#getUsers <em>Users</em>}'.
+	 * Returns the meta object for the containment reference list '{@link org.mehdi.model.webapp.Location#getUsers <em>Users</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Users</em>'.
-	 * @see org.mehdi.model.Location#getUsers()
+	 * @see org.mehdi.model.webapp.Location#getUsers()
 	 * @see #getLocation()
 	 * @generated
 	 */
 	EReference getLocation_Users();
 
 	/**
-	 * Returns the meta object for class '{@link org.mehdi.model.User <em>User</em>}'.
+	 * Returns the meta object for class '{@link org.mehdi.model.webapp.User <em>User</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>User</em>'.
-	 * @see org.mehdi.model.User
+	 * @see org.mehdi.model.webapp.User
 	 * @generated
 	 */
 	EClass getUser();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mehdi.model.User#getId <em>Id</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mehdi.model.webapp.User#getId <em>Id</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Id</em>'.
-	 * @see org.mehdi.model.User#getId()
+	 * @see org.mehdi.model.webapp.User#getId()
 	 * @see #getUser()
 	 * @generated
 	 */
 	EAttribute getUser_Id();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.mehdi.model.User#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link org.mehdi.model.webapp.User#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see org.mehdi.model.User#getName()
+	 * @see org.mehdi.model.webapp.User#getName()
 	 * @see #getUser()
 	 * @generated
 	 */
 	EAttribute getUser_Name();
 
 	/**
-	 * Returns the meta object for the container reference '{@link org.mehdi.model.User#getLocation <em>Location</em>}'.
+	 * Returns the meta object for the container reference '{@link org.mehdi.model.webapp.User#getLocation <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the container reference '<em>Location</em>'.
-	 * @see org.mehdi.model.User#getLocation()
+	 * @see org.mehdi.model.webapp.User#getLocation()
 	 * @see #getUser()
 	 * @generated
 	 */
 	EReference getUser_Location();
+
+	/**
+	 * Returns the meta object for class '{@link org.mehdi.model.webapp.PrivateUser <em>Private User</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Private User</em>'.
+	 * @see org.mehdi.model.webapp.PrivateUser
+	 * @generated
+	 */
+	EClass getPrivateUser();
+
+	/**
+	 * Returns the meta object for the attribute '{@link org.mehdi.model.webapp.PrivateUser#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see org.mehdi.model.webapp.PrivateUser#getPassword()
+	 * @see #getPrivateUser()
+	 * @generated
+	 */
+	EAttribute getPrivateUser_Password();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -260,7 +345,7 @@ public interface WebappPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	WebappFactory getWebappFactory();
+	webappFactory getwebappFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -277,11 +362,11 @@ public interface WebappPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link org.mehdi.model.impl.LocationImpl <em>Location</em>}' class.
+		 * The meta object literal for the '{@link org.mehdi.model.webapp.impl.LocationImpl <em>Location</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.mehdi.model.impl.LocationImpl
-		 * @see org.mehdi.model.impl.WebappPackageImpl#getLocation()
+		 * @see org.mehdi.model.webapp.impl.LocationImpl
+		 * @see org.mehdi.model.webapp.impl.webappPackageImpl#getLocation()
 		 * @generated
 		 */
 		EClass LOCATION = eINSTANCE.getLocation();
@@ -311,11 +396,11 @@ public interface WebappPackage extends EPackage {
 		EReference LOCATION__USERS = eINSTANCE.getLocation_Users();
 
 		/**
-		 * The meta object literal for the '{@link org.mehdi.model.impl.UserImpl <em>User</em>}' class.
+		 * The meta object literal for the '{@link org.mehdi.model.webapp.impl.UserImpl <em>User</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see org.mehdi.model.impl.UserImpl
-		 * @see org.mehdi.model.impl.WebappPackageImpl#getUser()
+		 * @see org.mehdi.model.webapp.impl.UserImpl
+		 * @see org.mehdi.model.webapp.impl.webappPackageImpl#getUser()
 		 * @generated
 		 */
 		EClass USER = eINSTANCE.getUser();
@@ -344,6 +429,24 @@ public interface WebappPackage extends EPackage {
 		 */
 		EReference USER__LOCATION = eINSTANCE.getUser_Location();
 
+		/**
+		 * The meta object literal for the '{@link org.mehdi.model.webapp.impl.PrivateUserImpl <em>Private User</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see org.mehdi.model.webapp.impl.PrivateUserImpl
+		 * @see org.mehdi.model.webapp.impl.webappPackageImpl#getPrivateUser()
+		 * @generated
+		 */
+		EClass PRIVATE_USER = eINSTANCE.getPrivateUser();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PRIVATE_USER__PASSWORD = eINSTANCE.getPrivateUser_Password();
+
 	}
 
-} //WebappPackage
+} //webappPackage

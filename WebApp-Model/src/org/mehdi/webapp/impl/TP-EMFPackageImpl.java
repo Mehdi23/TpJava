@@ -1,6 +1,6 @@
 /**
  */
-package org.mehdi.model.impl;
+package org.mehdi.webapp.impl;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -9,10 +9,11 @@ import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
 
-import org.mehdi.model.Location;
-import org.mehdi.model.User;
-import org.mehdi.model.WebappFactory;
-import org.mehdi.model.WebappPackage;
+import org.mehdi.webapp.Location;
+import org.mehdi.webapp.PrivateUser;
+import org.mehdi.webapp.TP-EMFFactory;
+import org.mehdi.webapp.TP-EMFPackage;
+import org.mehdi.webapp.User;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,7 +21,7 @@ import org.mehdi.model.WebappPackage;
  * <!-- end-user-doc -->
  * @generated
  */
-public class WebappPackageImpl extends EPackageImpl implements WebappPackage {
+public class TP-EMFPackageImpl extends EPackageImpl implements TP-EMFPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -36,6 +37,13 @@ public class WebappPackageImpl extends EPackageImpl implements WebappPackage {
 	private EClass userEClass = null;
 
 	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass privateUserEClass = null;
+
+	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
 	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
 	 * package URI value.
@@ -46,12 +54,12 @@ public class WebappPackageImpl extends EPackageImpl implements WebappPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see org.mehdi.model.WebappPackage#eNS_URI
+	 * @see org.mehdi.webapp.TP-EMFPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private WebappPackageImpl() {
-		super(eNS_URI, WebappFactory.eINSTANCE);
+	private TP-EMFPackageImpl() {
+		super(eNS_URI, TP-EMFFactory.eINSTANCE);
 	}
 
 	/**
@@ -64,7 +72,7 @@ public class WebappPackageImpl extends EPackageImpl implements WebappPackage {
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 * 
-	 * <p>This method is used to initialize {@link WebappPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link TP-EMFPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -73,27 +81,27 @@ public class WebappPackageImpl extends EPackageImpl implements WebappPackage {
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static WebappPackage init() {
-		if (isInited) return (WebappPackage)EPackage.Registry.INSTANCE.getEPackage(WebappPackage.eNS_URI);
+	public static TP-EMFPackage init() {
+		if (isInited) return (TP-EMFPackage)EPackage.Registry.INSTANCE.getEPackage(TP-EMFPackage.eNS_URI);
 
 		// Obtain or create and register package
-		WebappPackageImpl theWebappPackage = (WebappPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof WebappPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new WebappPackageImpl());
+		TP-EMFPackageImpl theTP-EMFPackage = (TP-EMFPackageImpl)(EPackage.Registry.INSTANCE.get(eNS_URI) instanceof TP-EMFPackageImpl ? EPackage.Registry.INSTANCE.get(eNS_URI) : new TP-EMFPackageImpl());
 
 		isInited = true;
 
 		// Create package meta-data objects
-		theWebappPackage.createPackageContents();
+		theTP-EMFPackage.createPackageContents();
 
 		// Initialize created meta-data
-		theWebappPackage.initializePackageContents();
+		theTP-EMFPackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
-		theWebappPackage.freeze();
+		theTP-EMFPackage.freeze();
 
   
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(WebappPackage.eNS_URI, theWebappPackage);
-		return theWebappPackage;
+		EPackage.Registry.INSTANCE.put(TP-EMFPackage.eNS_URI, theTP-EMFPackage);
+		return theTP-EMFPackage;
 	}
 
 	/**
@@ -173,8 +181,26 @@ public class WebappPackageImpl extends EPackageImpl implements WebappPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WebappFactory getWebappFactory() {
-		return (WebappFactory)getEFactoryInstance();
+	public EClass getPrivateUser() {
+		return privateUserEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPrivateUser_Password() {
+		return (EAttribute)privateUserEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public TP-EMFFactory getTP-EMFFactory() {
+		return (TP-EMFFactory)getEFactoryInstance();
 	}
 
 	/**
@@ -205,6 +231,9 @@ public class WebappPackageImpl extends EPackageImpl implements WebappPackage {
 		createEAttribute(userEClass, USER__ID);
 		createEAttribute(userEClass, USER__NAME);
 		createEReference(userEClass, USER__LOCATION);
+
+		privateUserEClass = createEClass(PRIVATE_USER);
+		createEAttribute(privateUserEClass, PRIVATE_USER__PASSWORD);
 	}
 
 	/**
@@ -235,6 +264,7 @@ public class WebappPackageImpl extends EPackageImpl implements WebappPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
+		privateUserEClass.getESuperTypes().add(this.getUser());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(locationEClass, Location.class, "Location", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -247,8 +277,11 @@ public class WebappPackageImpl extends EPackageImpl implements WebappPackage {
 		initEAttribute(getUser_Name(), ecorePackage.getEString(), "name", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getUser_Location(), this.getLocation(), this.getLocation_Users(), "location", null, 0, 1, User.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+		initEClass(privateUserEClass, PrivateUser.class, "PrivateUser", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPrivateUser_Password(), ecorePackage.getEInt(), "Password", null, 0, 1, PrivateUser.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
 		// Create resource
 		createResource(eNS_URI);
 	}
 
-} //WebappPackageImpl
+} //TP-EMFPackageImpl

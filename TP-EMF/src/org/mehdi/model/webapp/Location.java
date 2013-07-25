@@ -1,6 +1,6 @@
 /**
  */
-package org.mehdi.model;
+package org.mehdi.model.webapp;
 
 import org.eclipse.emf.common.util.EList;
 
@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.mehdi.model.Location#getId <em>Id</em>}</li>
- *   <li>{@link org.mehdi.model.Location#getName <em>Name</em>}</li>
- *   <li>{@link org.mehdi.model.Location#getUsers <em>Users</em>}</li>
+ *   <li>{@link org.mehdi.model.webapp.Location#getId <em>Id</em>}</li>
+ *   <li>{@link org.mehdi.model.webapp.Location#getName <em>Name</em>}</li>
+ *   <li>{@link org.mehdi.model.webapp.Location#getUsers <em>Users</em>}</li>
  * </ul>
  * </p>
  *
- * @see org.mehdi.model.WebappPackage#getLocation()
+ * @see org.mehdi.model.webapp.webappPackage#getLocation()
  * @model
  * @generated
  */
@@ -35,14 +35,14 @@ public interface Location extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Id</em>' attribute.
 	 * @see #setId(String)
-	 * @see org.mehdi.model.WebappPackage#getLocation_Id()
+	 * @see org.mehdi.model.webapp.webappPackage#getLocation_Id()
 	 * @model
 	 * @generated
 	 */
 	String getId();
 
 	/**
-	 * Sets the value of the '{@link org.mehdi.model.Location#getId <em>Id</em>}' attribute.
+	 * Sets the value of the '{@link org.mehdi.model.webapp.Location#getId <em>Id</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Id</em>' attribute.
@@ -61,14 +61,14 @@ public interface Location extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see org.mehdi.model.WebappPackage#getLocation_Name()
+	 * @see org.mehdi.model.webapp.webappPackage#getLocation_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link org.mehdi.model.Location#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link org.mehdi.model.webapp.Location#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -79,8 +79,8 @@ public interface Location extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Users</b></em>' containment reference list.
-	 * The list contents are of type {@link org.mehdi.model.User}.
-	 * It is bidirectional and its opposite is '{@link org.mehdi.model.User#getLocation <em>Location</em>}'.
+	 * The list contents are of type {@link org.mehdi.model.webapp.User}.
+	 * It is bidirectional and its opposite is '{@link org.mehdi.model.webapp.User#getLocation <em>Location</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <p>
 	 * If the meaning of the '<em>Users</em>' containment reference list isn't clear,
@@ -88,8 +88,8 @@ public interface Location extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Users</em>' containment reference list.
-	 * @see org.mehdi.model.WebappPackage#getLocation_Users()
-	 * @see org.mehdi.model.User#getLocation
+	 * @see org.mehdi.model.webapp.webappPackage#getLocation_Users()
+	 * @see org.mehdi.model.webapp.User#getLocation
 	 * @model opposite="location" containment="true"
 	 * @generated
 	 */

@@ -10,8 +10,7 @@
       <!-- @generated webapp -->
       <package
             uri="http://webapp/1.0"
-            class="org.mehdi.model.webapp.webappPackage"
-            genModel="webapp.genmodel"/>
+            class="org.mehdi.webapp.TP-EMFPackage"/>
    </extension>
 
 </plugin>
